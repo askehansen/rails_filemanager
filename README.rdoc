@@ -1,0 +1,62 @@
+= Filemanager
+
+This is a filemanager for ruby on rails.
+It works right away with {CKEditor}[http://ckeditor.com/].
+
+== Getting Started
+
+1. Add this to your gemfile:
+
+    gem "rails_filemanager"
+
+2. Run the generator:
+
+    rails generate filemanager:install
+    rake db:migrate
+
+3. Mount the filemanager in config/routes.rb:
+
+    mount Filemanager::Engine => "/filemanager"
+
+You can now find the filemanager at /filemanager
+
+== Configuration
+
+<<<<<<< HEAD
+All configuriation is done from: config/initializers/filemanager.rb
+
+Use the method check_authorization to ensure that a user is logged in:
+
+    def check_authorization
+        raise "unauthorized" unless session[:admin]
+    end
+
+The filemanager uses paperclip for storing the files.
+You can use your own storage options, if you want to use amazon s3 for instance:
+
+    Filemanager::Engine.config.paperclip_storage_options = { my: "option" }
+
+=======
+The filemanager uses paperclip for storing the files.
+You can use your own storage options defined in application.rb:
+
+    Filemanager::Engine.config.paperclip_storage_options = { my: "option" }
+
+Example using amazon s3 (remember to add "aws-sdk" to your gemfile):
+
+    Filemanager::Engine.config.paperclip_storage_options = {
+        storage: :s3,
+        bucket: "static.example.com",
+        s3_host_alias: "static.example.com",
+        url: ":s3_alias_url",
+        path: ":attachment/:id/:style/:basename.:extension",
+        s3_credentials: {
+            access_key_id: "ACCESSKEY",
+            secret_access_key: "SECRET"
+        }
+    }
+>>>>>>> f48bfcf7a1dc6f041244b3ad5d18a92d55f0daa7
+
+== License
+
+This project rocks and uses MIT-LICENSE.

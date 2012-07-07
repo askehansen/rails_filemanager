@@ -1,0 +1,8 @@
+<div id="upload">
+	<input id="file_upload" name="file_upload" type="file" data-location="<%= files_path %>" />
+</div>
+<div id="files">
+	<% @User_files.each do |f| %>
+		<%= render partial: "file", locals: {user_file: f} %>
+	<% end %>
+</div>
