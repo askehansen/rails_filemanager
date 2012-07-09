@@ -69,7 +69,7 @@ Say, if your app speaks spanish, you could use this example:
     
     rails_filemanager:
       upload: "Upload archivos"
-      delete: "Eliminar %{filename}?"
+      delete: "¿Eliminar %{filename}?"
 
 == Planned features
 
