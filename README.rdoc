@@ -3,37 +3,79 @@
 This is a filemanager for ruby on rails.
 It works right away with {CKEditor}[http://ckeditor.com/].
 
+See demo at: http://filemanager-demo.herokuapp.com/filemanager
+
 == Getting Started
 
 1. Add this to your gemfile:
 
-    gem "rails_filemanager"
+    gem "filemanager", path: https://github.com/Askehansen/filemanager.git
 
 2. Run the generator:
 
     rails generate filemanager:install
     rake db:migrate
 
-3. Mount the filemanager in config/routes.rb:
+3. Now mount the filemanager in your routes:
 
+    # config/routes.rb
+    
     mount Filemanager::Engine => "/filemanager"
 
 You can now find the filemanager at /filemanager
 
 == Configuration
 
-All configuriation is done from: config/initializers/filemanager.rb
+=== Authorization
 
 Use the method check_authorization to ensure that a user is logged in:
+
+    # config/initializers/filemanager.rb
 
     def check_authorization
         raise "unauthorized" unless session[:admin]
     end
 
+=== Storage
+
 The filemanager uses paperclip for storing the files.
 You can use your own storage options, if you want to use amazon s3 for instance:
 
-    Filemanager::Engine.config.paperclip_storage_options = { my: "option" }
+    # config/initializers/filemanager.rb
+
+    Filemanager::Engine.config.paperclip_storage_options = {
+        storage: :s3,
+        bucket: "static.example.com",
+        s3_host_alias: "static.example.com",
+        url: ":s3_alias_url",
+        path: ":attachment/:id/:style/:basename.:extension",
+        s3_credentials: {
+            access_key_id: "ACCESSKEY",
+            secret_access_key: "SECRET"
+        }
+    }
+
+=== Translation
+
+The default translation is:
+
+    filemanager:
+      upload: "Upload files"
+      delete: "Delete %{filename}?"
+
+Say, if your app speaks spanish, you could use this example:
+
+    # config/locales/es.yml
+    
+    filemanager:
+      upload: "Upload archivos"
+      delete: "Eliminar %{filename}?"
+
+== Planned features
+
+* Organize in folders
+* Custom javascript callback
+* Adding unit tests
 
 == License
 

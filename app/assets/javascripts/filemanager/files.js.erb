@@ -14,7 +14,7 @@ $(document).ready(function()
   {
     swf: "/assets/filemanager/uploadify.swf",
     uploader: $("#file_upload").data("location"),
-    buttonText: "Upload billeder",
+    buttonText: "<%= I18n.t 'filemanager.upload', default: 'Upload files' %>",
     auto: true,
     multi: true,
     formData: SessionParams,
@@ -29,7 +29,7 @@ $(document).ready(function()
     e.preventDefault();
     $this = $(this);
 
-    var deleteImg = confirm("Slet " + $this.data("name") + "?");
+    var deleteImg = confirm("<%= I18n.t 'filemanager.delete', filename: '" + $this.data("name") + "', default: 'Delete %{filename}?' %>");
     if (deleteImg)
     {
       var parent = $this.parent(".file");
