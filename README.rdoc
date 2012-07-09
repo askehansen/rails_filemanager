@@ -1,4 +1,4 @@
-= Filemanager
+= RailsFilemanager
 
 This is a filemanager for ruby on rails.
 It works right away with {CKEditor}[http://ckeditor.com/].
@@ -9,18 +9,18 @@ See demo at: http://filemanager-demo.herokuapp.com/filemanager
 
 1. Add this to your gemfile:
 
-    gem "filemanager", path: https://github.com/Askehansen/filemanager.git
+    gem "rails_filemanager"
 
 2. Run the generator:
 
-    rails generate filemanager:install
+    rails generate rails_filemanager:install
     rake db:migrate
 
 3. Now mount the filemanager in your routes:
 
     # config/routes.rb
     
-    mount Filemanager::Engine => "/filemanager"
+    mount RailsFilemanager::Engine => "/filemanager"
 
 You can now find the filemanager at /filemanager
 
@@ -30,7 +30,7 @@ You can now find the filemanager at /filemanager
 
 Use the method check_authorization to ensure that a user is logged in:
 
-    # config/initializers/filemanager.rb
+    # config/initializers/rails_filemanager.rb
 
     def check_authorization
         raise "unauthorized" unless session[:admin]
@@ -41,9 +41,9 @@ Use the method check_authorization to ensure that a user is logged in:
 The filemanager uses paperclip for storing the files.
 You can use your own storage options, if you want to use amazon s3 for instance:
 
-    # config/initializers/filemanager.rb
+    # config/initializers/rails_filemanager.rb
 
-    Filemanager::Engine.config.paperclip_storage_options = {
+    RailsFilemanager::Engine.config.paperclip_storage_options = {
         storage: :s3,
         bucket: "static.example.com",
         s3_host_alias: "static.example.com",
@@ -59,7 +59,7 @@ You can use your own storage options, if you want to use amazon s3 for instance:
 
 The default translation is:
 
-    filemanager:
+    rails_filemanager:
       upload: "Upload files"
       delete: "Delete %{filename}?"
 
@@ -67,7 +67,7 @@ Say, if your app speaks spanish, you could use this example:
 
     # config/locales/es.yml
     
-    filemanager:
+    rails_filemanager:
       upload: "Upload archivos"
       delete: "Eliminar %{filename}?"
 

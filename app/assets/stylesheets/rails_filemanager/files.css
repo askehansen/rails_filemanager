@@ -1,0 +1,64 @@
+body
+{
+	margin-left: 260px;
+}
+#upload
+{
+	padding: 10px;
+	width: 230px;
+	background-color: #f5f5f5;
+	border-right: 1px solid #ddd;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+}
+#files .file
+{
+	float: left;
+	position: relative;
+}
+#files .file a.select
+{
+	display: block;
+	padding: 10px;
+	margin: 5px;
+	background-color: #fbfbfb;
+  	font-family: helvetica;
+  	color: #666;
+  	font-size: 12px;
+  	text-decoration: none;
+}
+#files .file .image
+{
+	width: 100px;
+	height: 100px;
+	text-align: center;
+}
+#files .file .name
+{
+	margin-top: 10px;
+	text-align: center;
+}
+#files .file a.delete
+{
+	display: block;
+	display: none;
+	width: 20px;
+	height: 20px;
+	background-image: url(/assets/rails_filemanager/delete.png);
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+#files .file:hover a.select
+{
+	background-color: #f7f7f7;
+	color: #000;
+}
+
+#files .file:hover a.delete
+{
+	display: inline;
+}

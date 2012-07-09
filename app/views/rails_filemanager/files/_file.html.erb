@@ -1,0 +1,9 @@
+<div class="file">
+<a class="select" href="<%= user_file.file.url %>" target="_blank" title="<%= user_file.file_file_name %>">
+	<div class="image">
+		<img src="<%= user_file.thumb_url %>" />
+	</div>
+	<div class="name"><%= user_file.file_file_name.truncate(15) %></div>
+</a>
+<a class="delete" data-name="<%= user_file.file_file_name %>" href="<%= file_path user_file %>"></a>
+</div>

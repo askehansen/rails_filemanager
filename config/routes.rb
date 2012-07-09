@@ -1,4 +1,4 @@
-Filemanager::Engine.routes.draw do
+RailsFilemanager::Engine.routes.draw do
 	
 	root to: "files#index"
 
