@@ -3,7 +3,7 @@
 This is a filemanager for ruby on rails.
 It works right away with {CKEditor}[http://ckeditor.com/].
 
-See demo at: http://filemanager-demo.herokuapp.com/filemanager
+See demo at: http://filemanager-demo.herokuapp.com/
 
 == Getting Started
 
