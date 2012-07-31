@@ -80,3 +80,7 @@ Say, if your app speaks spanish, you could use this example:
 == License
 
 This project rocks and uses MIT-LICENSE.
+
+
+
+![githalytics.com alpha](https://cruel-carlota.pagodabox.com/ca63d32b38e8c3ece75c199215cf990c)
