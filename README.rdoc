@@ -71,7 +71,7 @@ Say, if your app speaks spanish, you could use this example:
       upload: "Upload archivos"
       delete: "¿Eliminar %{filename}?"
 
-== Planned features
+== Roadmap
 
 * Organize in folders
 * Custom javascript callback
