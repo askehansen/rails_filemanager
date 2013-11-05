@@ -2,6 +2,8 @@ require_dependency "rails_filemanager/application_controller"
 
 module RailsFilemanager
   class FilesController < ApplicationController
+  	skip_before_filter :check_authorization, only: [:create]
+
   	def index
 		@User_files = User_file.all
 	end

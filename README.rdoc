@@ -3,7 +3,7 @@
 This is a filemanager for ruby on rails.
 It works right away with {CKEditor}[http://ckeditor.com/].
 
-See demo at: http://filemanager-demo.herokuapp.com/
+See demo at: http://filemanager-demo.herokuapp.com
 
 == Getting Started
 
@@ -80,3 +80,7 @@ Say, if your app speaks spanish, you could use this example:
 == License
 
 This project rocks and uses MIT-LICENSE.
+
+Uploadify: http://www.uploadify.com/mit-license/
+
+Paperclip: https://github.com/thoughtbot/paperclip#license

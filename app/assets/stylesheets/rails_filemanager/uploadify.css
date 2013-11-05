@@ -71,7 +71,7 @@ Released under the MIT License <http://www.opensource.org/licenses/mit-license.p
 	background-color: #FDE5DD !important;
 }
 .uploadify-queue-item .cancel a {
-	background: url('/assets/filemanager/uploadify-cancel.png') 0 0 no-repeat;
+	background: url('/assets/rails_filemanager/uploadify-cancel.png') 0 0 no-repeat;
 	float: right;
 	height:	16px;
 	text-indent: -9999px;
