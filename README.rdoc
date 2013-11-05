@@ -69,9 +69,9 @@ Say, if your app speaks spanish, you could use this example:
     
     rails_filemanager:
       upload: "Upload archivos"
-      delete: "Eliminar %{filename}?"
+      delete: "¿Eliminar %{filename}?"
 
-== Planned features
+== Roadmap
 
 * Organize in folders
 * Custom javascript callback
@@ -80,7 +80,10 @@ Say, if your app speaks spanish, you could use this example:
 == License
 
 This project rocks and uses MIT-LICENSE.
+<<<<<<< HEAD
 
 Uploadify: http://www.uploadify.com/mit-license/
 
 Paperclip: https://github.com/thoughtbot/paperclip#license
+=======
+>>>>>>> baf16fe1f2677143989f07591bd3b265dcd2b844
